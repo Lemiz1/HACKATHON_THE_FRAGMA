@@ -1,0 +1,90 @@
+Arguments: 
+  /home/dokhanh/.nvm/versions/node/v18.4.0/bin/node /home/dokhanh/.nvm/versions/node/v18.4.0/bin/yarn add @psychedelic/plug-connect
+
+PATH: 
+  /home/dokhanh/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/home/dokhanh/bin:/home/dokhanh/.cargo/bin:/home/dokhanh/.nvm/versions/node/v18.4.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu20.04onWindows_2004.2022.8.0_x64__79rhkp1fndgsc:/mnt/c/Python310/Scripts/:/mnt/c/Python310/:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Users/Admin/scoop/apps/gsudo/current:/mnt/c/Users/Admin/scoop/shims:/mnt/c/Users/Admin/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/ProgramData/Admin/GitHubDesktop/bin:/mnt/c/Users/Admin/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Admin/Downloads/PortableGit/bin/git.exe:/mnt/c/Program Files/Emacs/emacs-28.1/bin:/mnt/c/xampp/php:/mnt/c/Program Files/Git/bin/:/mnt/c/Users/Admin/AppData/Roaming/npm:/snap/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.4.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@psychedelic%2fplug-connect: Not found
+      at params.callback [as _callback] (/home/dokhanh/.nvm/versions/node/v18.4.0/lib/node_modules/yarn/lib/cli.js:66145:18)
+      at self.callback (/home/dokhanh/.nvm/versions/node/v18.4.0/lib/node_modules/yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:537:28)
+      at Request.<anonymous> (/home/dokhanh/.nvm/versions/node/v18.4.0/lib/node_modules/yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:537:28)
+      at IncomingMessage.<anonymous> (/home/dokhanh/.nvm/versions/node/v18.4.0/lib/node_modules/yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:651:28)
+      at IncomingMessage.emit (node:events:549:35)
+      at endReadableNT (node:internal/streams/readable:1359:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+npm manifest: 
+  {
+    "name": "custom_greeting_frontend",
+    "version": "0.1.0",
+    "description": "Internet Computer starter application",
+    "keywords": [
+      "Internet Computer",
+      "Motoko",
+      "JavaScript",
+      "Canister"
+    ],
+    "scripts": {
+      "build": "webpack",
+      "prebuild": "npm run copy:types",
+      "start": "webpack serve --mode development --env development",
+      "prestart": "npm run copy:types",
+      "copy:types": "rsync -avr .dfx/$(echo ${DFX_NETWORK:-'**'})/canisters/** --exclude='assets/' --exclude='idl/' --exclude='*.wasm' --exclude='*.most' --delete src/declarations"
+    },
+    "devDependencies": {
+      "@dfinity/agent": "0.12.2",
+      "@dfinity/candid": "0.12.2",
+      "@dfinity/principal": "0.12.2",
+      "assert": "2.0.0",
+      "buffer": "6.0.3",
+      "events": "3.3.0",
+      "html-webpack-plugin": "5.5.0",
+      "process": "0.11.10",
+      "stream-browserify": "3.0.0",
+      "terser-webpack-plugin": "^5.3.3",
+      "ts-loader": "^9.3.1",
+      "typescript": "^4.7.4",
+      "util": "0.12.4",
+      "webpack": "^5.73.0",
+      "webpack-cli": "^4.10.0",
+      "webpack-dev-server": "^4.8.1"
+    },
+    "engines": {
+      "node": "^12 || ^14 || ^16 || ^18"
+    },
+    "browserslist": [
+      "last 2 chrome version",
+      "last 2 firefox version",
+      "last 2 safari version",
+      "last 2 edge version"
+    ],
+    "dependencies": {
+      "@connect2ic/core": "^0.1.6",
+      "@connect2ic/react": "^0.1.4",
+      "bulma": "^0.9.4",
+      "css-loader": "^6.7.1",
+      "ipfs-http-client": "^57.0.3",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "style-loader": "^3.3.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
